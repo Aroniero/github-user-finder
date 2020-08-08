@@ -37,5 +37,5 @@ npm run start
 
 ## Live  :rocket:
 
-<a href="https://aroniero.github.io/github-user-finder/#/ target="_blank">Github user finder</a>
+<a href="https://aroniero.github.io/github-user-finder/#/" target="_blank">Github user finder</a>
 
