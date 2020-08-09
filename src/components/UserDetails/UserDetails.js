@@ -13,18 +13,18 @@ import {
   Nick,
 } from './UserDetails.style';
 
-const UserDetails = (props) => {
-  const { html_url, avatar_url, name, login, created_at, followers, following, public_repos } = props.user;
+const UserDetails = ({ user }) => {
+  const { htmlUrl, avatarUrl, name, login, createdAt, followers, following, publicRepos } = user;
 
   return (
     <OuterContainer>
       <Container>
-        <a href={html_url} target="_blank" rel="noopener noreferrer">
-          <StyledImage src={avatar_url} alt={`${name} avatar`} />
+        <a href={htmlUrl} target="_blank" rel="noopener noreferrer">
+          <StyledImage src={avatarUrl} alt={`${name} avatar`} />
         </a>
         <Name>{name}</Name>
         <Nick>@{login}</Nick>
-        <JoinDate>Joined: {new Date(created_at).toLocaleDateString()}</JoinDate>
+        <JoinDate>Joined: {new Date(createdAt).toLocaleDateString()}</JoinDate>
         <CardContainer>
           <Card>
             <CardName>Followers</CardName>
@@ -36,7 +36,7 @@ const UserDetails = (props) => {
           </Card>
           <Card>
             <CardName>Repositories</CardName>
-            <CardNumber>{public_repos}</CardNumber>
+            <CardNumber>{publicRepos}</CardNumber>
           </Card>
         </CardContainer>
       </Container>
