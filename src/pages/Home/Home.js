@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Redirect } from 'react-router-dom';
 
 import { FaGithub } from 'react-icons/fa';
@@ -6,33 +6,23 @@ import { FaGithub } from 'react-icons/fa';
 import Button from '../../components/Button/Button';
 import { Heading, Container, Input } from './Home.style';
 import routes from '../../routes';
+import { useHomeForm } from './Home.hooks';
 
 const Home = () => {
-  const [input, setInput] = useState('');
-  const [submitted, setSubmitted] = useState(false);
+  const [submitted, handleSubmit] = useHomeForm();
 
-  const handleSubmit = (e) => {
-    e.preventDefault(e);
-    setSubmitted(true);
-  };
+  if (submitted) {
+    // todo: Validate if submitted is not empty
+    return <Redirect to={routes.user(submitted)} />;
+  }
 
   return (
     <>
-      {submitted && <Redirect to={routes.user(input)} />}
       <Container>
         <FaGithub color="white" size="8rem" />
         <Heading>Enter user name:</Heading>
-        <form
-          onSubmit={(e) => {
-            handleSubmit(e);
-          }}
-        >
-          <Input
-            placeholder="e.g. stolinski"
-            onChange={(e) => {
-              setInput(e.target.value);
-            }}
-          />
+        <form onSubmit={handleSubmit}>
+          <Input placeholder="e.g. stolinski" name="name" />
           <Button primary>Submit</Button>
         </form>
       </Container>
