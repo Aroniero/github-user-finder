@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import { fetchUserData, fetchUserRepo } from "../utils/fetchData";
+import { fetchUserData, fetchUserRepo } from '../../utils/fetchData';
 
-import { Link, Redirect } from "react-router-dom";
+import { Link, Redirect } from 'react-router-dom';
 
-import UserDetails from "../components/UserDetails";
-import UserRepoList from "../components/UserRepoList";
-import Loading from "../components/Loading";
-import Button from "../components/Button";
+import UserDetails from '../../components/UserDetails/UserDetails';
+import UserRepoList from '../../components/UserRepoList/UserRepoList';
+import Loading from '../../components/Loading/Loading';
+import Button from '../../components/Button/Button';
 
 const User = ({ match }) => {
   const [user, setUser] = useState({});

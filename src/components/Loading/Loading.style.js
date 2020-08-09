@@ -1,20 +1,19 @@
-import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 const bounce = keyframes`
-   to {
+    to {
         opacity: 0.1;
         transform: translate3d(0, -16px, 0);
-      }
+    }
 `;
 
-const StyledContainer = styled.div`
+export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: ${({ theme }) => theme.colors.blue};
 `;
 
-const StyledBouncingLoader = styled.div`
+export const BouncingLoader = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -30,7 +29,7 @@ const StyledBouncingLoader = styled.div`
     margin-bottom: -5px;
 
     animation: 0.6s ${bounce} infinite alternate;
-    content: "";
+    content: '';
   }
 
   ::after {
@@ -38,7 +37,7 @@ const StyledBouncingLoader = styled.div`
   }
 `;
 
-const StyledBouncingDiv = styled.div`
+export const Bouncing = styled.div`
   display: inline-block;
   width: 23px;
   height: 23px;
@@ -46,19 +45,7 @@ const StyledBouncingDiv = styled.div`
   margin: 0 5px -5px;
   border-radius: 50%;
 
-  content: "";
+  content: '';
   animation: ${bounce} 0.6s infinite alternate;
   animation-delay: 0.2s;
 `;
-
-const Loading = () => {
-  return (
-    <StyledContainer>
-      <StyledBouncingLoader>
-        <StyledBouncingDiv />
-      </StyledBouncingLoader>
-    </StyledContainer>
-  );
-};
-
-export default Loading;

@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import GlobalStyles from "./styles/GlobalStyles";
+import GlobalStyles from './styles/GlobalStyles';
 
-import { ThemeProvider } from "styled-components";
-import { theme } from "./styles/theme";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { ThemeProvider } from 'styled-components';
+import { theme } from './styles/theme';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
-import User from "./pages/User";
+import Home from './pages/Home/Home';
+import NotFound from './pages/NotFound/NotFound';
+import User from './pages/User/User';
 
 function App() {
   return (
