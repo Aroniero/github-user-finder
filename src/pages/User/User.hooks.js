@@ -16,7 +16,6 @@ export const useFetchUser = (user) => {
           repos: await fetchUserRepo(user),
         });
       } catch (error) {
-        // todo: Handle other errors than 404
         setError(true);
       } finally {
         setIsLoading(false);

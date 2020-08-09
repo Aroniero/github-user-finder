@@ -12,7 +12,6 @@ const Home = () => {
   const [submitted, handleSubmit] = useHomeForm();
 
   if (submitted) {
-    // todo: Validate if submitted is not empty
     return <Redirect to={routes.user(submitted)} />;
   }
 
