@@ -3,27 +3,25 @@ import React from 'react';
 import { FaCodeBranch, FaStar, FaBookmark } from 'react-icons/fa';
 import { IconContainer, Card, Description, StyledFaCircle, FileSize, Heading, HeadingLink } from './Repo.style';
 
-export const Repo = (props) => {
-  const { html_url, name, description, language, stargazers_count, forks, size } = props;
-
+export const Repo = ({ htmlUrl, name, description, language, stargazersCount, forks, size }) => {
   return (
     <Card>
       <Heading>
         <FaBookmark />
-        <HeadingLink href={html_url} target="_blank">
+        <HeadingLink href={htmlUrl} target="_blank">
           {name}
         </HeadingLink>
       </Heading>
 
-      <Description>{!description ? 'No description...' : description}</Description>
+      <Description>{description ?? 'No description...'}</Description>
 
       <IconContainer>
         <span>
-          <StyledFaCircle langcolor={language} /> {!language ? '---' : language}
+          <StyledFaCircle langcolor={language} /> {language ?? '---'}
         </span>
 
         <span>
-          <FaStar /> {stargazers_count}
+          <FaStar /> {stargazersCount}
         </span>
         <span>
           <FaCodeBranch /> {forks}
