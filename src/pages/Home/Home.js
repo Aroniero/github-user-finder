@@ -5,6 +5,7 @@ import { FaGithub } from 'react-icons/fa';
 
 import Button from '../../components/Button/Button';
 import { Heading, Container, Input } from './Home.style';
+import routes from '../../routes';
 
 const Home = () => {
   const [input, setInput] = useState('');
@@ -17,7 +18,7 @@ const Home = () => {
 
   return (
     <>
-      {submitted && <Redirect from="/" to={`/users/${input}`} />}
+      {submitted && <Redirect to={routes.user(input)} />}
       <Container>
         <FaGithub color="white" size="8rem" />
         <Heading>Enter user name:</Heading>

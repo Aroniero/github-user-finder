@@ -8,6 +8,7 @@ import UserDetails from '../../components/UserDetails/UserDetails';
 import UserRepoList from '../../components/UserRepoList/UserRepoList';
 import Loading from '../../components/Loading/Loading';
 import Button from '../../components/Button/Button';
+import routes from '../../routes';
 
 const User = ({ match }) => {
   const [user, setUser] = useState({});
@@ -38,7 +39,7 @@ const User = ({ match }) => {
   return (
     <>
       {error ? (
-        <Redirect to="/notFound" />
+        <Redirect to={routes.notFound} />
       ) : isLoading ? (
         <Loading />
       ) : (
