@@ -35,6 +35,16 @@ npm run start
 | `npm run build` | Create optimized build |
 | `npm run test`  | Run tests              |
 
+## Contributors :man: :woman:
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/arkadiuszbachorski"><img src="https://avatars1.githubusercontent.com/u/60391032?s=460&u=fab6c781390dde0e4c9bec88c26029ed50c9acdd&v=4" width="100px;" alt="Arkadiusz Bachorski Avatar"/><br /><sub><b>Arkadiusz Bachorski</b></sub></a></td>
+  </tr>
+</table>
+
+
+
 ## Live  :rocket:
 
 <a href="https://aroniero.github.io/github-user-finder/#/" target="_blank">Github user finder</a>
