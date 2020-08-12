@@ -17,6 +17,10 @@ export const Heading = styled.h1`
   font-family: 'Montserrat', sans-serif;
 `;
 
+export const UserForm = styled.form`
+  position: relative;
+`;
+
 export const Input = styled.input`
   min-width: 300px;
   padding: 10px 20px;
@@ -24,4 +28,17 @@ export const Input = styled.input`
   outline: none;
   border: 2px solid white;
   background-color: white;
+`;
+
+export const ErrorMsg = styled.div`
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border-radius: 10px;
+  width: 80%;
+  padding: 15px 20px;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
 `;
